@@ -30,7 +30,7 @@ Cadastro pessoa;
 Estoque estoque;
 Sistema sistema;
 
-void bemvindo(Cadastro, Sistema, Estoque);  		   //Função de abertura do programa
+void bemvindo(Cadastro, Sistema, Estoque);  		  //Função de abertura do programa
 void menuPrincipal(Cadastro, Sistema, Estoque);      //Função menu principal
 void cadastro(Cadastro, Sistema, Estoque);           //função para cadastro
 void menuCliente(Cadastro, Sistema, Estoque);	 //Função menu Cliente
