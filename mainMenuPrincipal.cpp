@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------|
-|      					Sistema Virtual de um Supermercado						|
-|																				|
-|	Desenvolvedor: AndrÈ Escari„o, Graduando em engenharia ElÈtrica - UFCG		|
-|	 																		    |
-|		Compilador: Falcon C++		  											|			      						    								|
-|				   									   							|
+|      			Sistema Virtual de um Supermercado			|
+|										|
+|    Desenvolvedor: Andr√© Escari√£o, Graduando em engenharia El√©trica - UFCG	|
+|	 									|
+|    Compilador: Falcon C++		  					|			      						    								|
+|				   						|
 |------------------------------------------------------------------------------*/
 
 #include <fstream>
@@ -30,15 +30,15 @@ Cadastro pessoa;
 Estoque estoque;
 Sistema sistema;
 
-void bemvindo(Cadastro, Sistema, Estoque);  		   //FunÁ„o de abertura do programa
-void menuPrincipal(Cadastro, Sistema, Estoque);      //FunÁ„o menu principal
-void cadastro(Cadastro, Sistema, Estoque);           //funÁ„o para cadastro
-void menuCliente(Cadastro, Sistema, Estoque);	 //FunÁ„o menu Cliente
-void menuGerente(Cadastro, Sistema, Estoque);			 //FunÁ„o menu gerente
-void sair();                      	 //FunÁ„o para saida do programa
+void bemvindo(Cadastro, Sistema, Estoque);  		   //Fun√ß√£o de abertura do programa
+void menuPrincipal(Cadastro, Sistema, Estoque);      //Fun√ß√£o menu principal
+void cadastro(Cadastro, Sistema, Estoque);           //fun√ß√£o para cadastro
+void menuCliente(Cadastro, Sistema, Estoque);	 //Fun√ß√£o menu Cliente
+void menuGerente(Cadastro, Sistema, Estoque);			 //Fun√ß√£o menu gerente
+void sair();                      	 //Fun√ß√£o para saida do programa
 
 
-//FunÁ„o principal
+//Fun√ß√£o principal
 int main()
 {
 	setlocale(LC_ALL, "");
@@ -79,7 +79,7 @@ void menuPrincipal(Cadastro, Sistema, Estoque)
 
 	switch(op)
 	{
-		//OpÁ„o 01: Fazer login no sistema
+		//Op√ß√£o 01: Fazer login no sistema
 	case 1:
 	{
 
@@ -102,12 +102,12 @@ void menuPrincipal(Cadastro, Sistema, Estoque)
 			string usu;
 
 			cout << "Menu de Login: " << endl;
-			cout << "Digite o nome de Usu·rio: " << endl;
+			cout << "Digite o nome de Usu√°rio: " << endl;
 			cin >> usu;
 			cout << "Digite a Chave de acesso:" << endl;
 			cin >> ch;
 
-			//Verifica se o login est· no sistema
+			//Verifica se o login est√° no sistema
 			if(pessoa.verifica(ch) == usu)
 			{
 				//Abre menu do cliente
@@ -117,7 +117,7 @@ void menuPrincipal(Cadastro, Sistema, Estoque)
 			else
 			{
 				system("cls");
-				cout << "Login n„o cadastrado!" << endl;
+				cout << "Login n√£o cadastrado!" << endl;
 				system("pause");
 
 				//Volta para menu principal
@@ -177,7 +177,7 @@ void menuPrincipal(Cadastro, Sistema, Estoque)
 		}
 		break;
 	}
-	//OpÁ„o 02: Fazer Cadastro no sistema
+	//Op√ß√£o 02: Fazer Cadastro no sistema
 	case 2:
 	{
 		system("cls");
@@ -211,20 +211,20 @@ void menuPrincipal(Cadastro, Sistema, Estoque)
 //Menu para classe Cadastro
 void cadastro(Cadastro, Sistema, Estoque)
 {
-	//ManipulaÁ„o de arquivo
+	//Manipula√ß√£o de arquivo
 	ofstream arquivoS;
 	arquivoS.open("Cadastro.txt", ios::app | ios::app);
 
-	//Par‚metros para cadastro
+	//Par√¢metros para cadastro
 	string cpf, nome, cep, rua, bairro, complemento, usuario;
 	int chaveCliente, numero;
 
 	//Recebe os dados da pessoa
 	cout << "Preencha os dados abaixo: " << endl << endl;
-	cout << "Usu·rio: " << endl;
-	arquivoS << "Usu·rio: ";
+	cout << "Usu√°rio: " << endl;
+	arquivoS << "Usu√°rio: ";
 	cin >> usuario;
-	cout << "Chave de Acesso(3 dÌgitos): " << endl;
+	cout << "Chave de Acesso(3 d√≠gitos): " << endl;
 	cin >> chaveCliente;
 
 
@@ -261,7 +261,7 @@ void cadastro(Cadastro, Sistema, Estoque)
 			cin.ignore();
 			getline(cin, bairro);
 			arquivoS << bairro << endl;
-			cout << "N˙mero: " << endl;
+			cout << "N√∫mero: " << endl;
 			cin >> numero;
 			arquivoS << numero << endl;
 			cout << "Complemento: " << endl;
@@ -304,8 +304,8 @@ void cadastro(Cadastro, Sistema, Estoque)
 			system("cls");
 
 			cout << "             Senha Ivalida!   " << endl << endl
-				 << "Cadastre uma senha com 3 dÌgitos "
-				 << "a senha n„o pode iniciar com 0" << endl << endl;
+				 << "Cadastre uma senha com 3 d√≠gitos "
+				 << "a senha n√£o pode iniciar com 0" << endl << endl;
 
 			system("pause");
 			system("cls");
@@ -337,19 +337,19 @@ void menuCliente(Cadastro, Sistema, Estoque)
 
 	switch(op)
 	{
-		//OpÁ„o 01: Exibe Lista de produtos em estoque (CLIENTE)
+		//Op√ß√£o 01: Exibe Lista de produtos em estoque (CLIENTE)
 	case 1:
 	{
 		system("cls");
 
-		//MÈtodo imprime
+		//M√©todo imprime
 		sistema.imprimeListaProdutos(estoque);
 
 		system("pause");
 		menuCliente(pessoa, sistema, estoque);
 		break;
 	}
-	//OpÁ„o 02: Cadastra nova Venda (CLIENTE)
+	//Op√ß√£o 02: Cadastra nova Venda (CLIENTE)
 	case 2:
 	{
 
@@ -363,7 +363,7 @@ void menuCliente(Cadastro, Sistema, Estoque)
 		{
 
 			cout << "Adicionar ao carrinho..." << endl;
-			cout << "CÛdigo: " << endl;
+			cout << "C√≥digo: " << endl;
 			cin >> cod;
 			cout << "Quantidade: " << endl;
 			cin >> quant;
@@ -391,7 +391,7 @@ void menuCliente(Cadastro, Sistema, Estoque)
 		break;
 
 	}
-	//OpÁ„o 05: Voltar
+	//Op√ß√£o 05: Voltar
 	case 3:
 	{
 		system("cls");
@@ -427,7 +427,7 @@ void menuGerente(Cadastro, Sistema, Estoque)
 
 	switch(op)
 	{
-		//OpÁ„o 1: Cadastro de produto
+		//Op√ß√£o 1: Cadastro de produto
 	case 1:
 	{
 
@@ -453,7 +453,7 @@ void menuGerente(Cadastro, Sistema, Estoque)
 			cout << "Informe a quantidade:" << endl;
 			cin >> quantidade;
 
-			//Informa o cÛdigo do produto
+			//Informa o c√≥digo do produto
 			estoque.setCodigo(codigo);
 			//Cadastra os dados do produto
 			estoque.setCadastrar(nome, valor, quantidade);
@@ -470,19 +470,19 @@ void menuGerente(Cadastro, Sistema, Estoque)
 		break;
 
 	}
-	//OpÁ„o 02: Exibe a lista de Produtos
+	//Op√ß√£o 02: Exibe a lista de Produtos
 	case 2:
 	{
 		system("cls");
 
-		//MÈtodo imprime
+		//M√©todo imprime
 		estoque.imprime();
 
 		system("pause");
 		menuGerente(pessoa, sistema, estoque);
 		break;
 	}
-	//OpÁ„o 03: Voltar
+	//Op√ß√£o 03: Voltar
 	case 3:
 	{
 		system("cls");
