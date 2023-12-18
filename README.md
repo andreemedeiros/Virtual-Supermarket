@@ -20,11 +20,14 @@ e três classes: Sistema, Cadastro e Estoque.
 ## Funcionalidade
 
 ```
-  - O Menu Principal terá as opções de Login e Cadastro de usuário. Por conseguinte, o Login levará à opção de cliente, depois do cadastro ou gerente, com uma chave de acesso predefinida.
+  - O Menu Principal terá as opções de Login e Cadastro de usuário.
+      - Se escolher Login, será levado à opção de cliente.
+      - Se escolher Cadastro, inicializará o cadastro do cliente.
+      - Se escolher Gerente, terá uma chave de acesso predefinida.
 
   - O gerente poderá cadastrar o produto com nome, código, preço, quantidade e obter a lista de todos os produtos para controle de estoque.
 
-  - Logo após, quando houver produtos no estoque, o cliente poderá ver a lista de produtos do supermercado e realizar a compra.
+  - Quando houver produtos no estoque, o cliente poderá ver a lista de produtos do supermercado e realizar a compra.
 ```
 
 ### Recursos:
