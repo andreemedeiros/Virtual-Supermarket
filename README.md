@@ -11,7 +11,10 @@
 ## Descrição
 
 ```
-O projeto tem como finalidade realizar um Sistema Virtual para controle de vendas de um supermercado na liguagem C++. Com isso, o programa utiliza das técnicas de programação POO (Programação Orientada a Objeto) criando um menu principal e três classes: Sistema, Cadastro e Estoque.
+O projeto tem como finalidade realizar um Sistema Virtual para controle de vendas de um supermercado na liguagem C++.
+
+Com isso, o programa utiliza das técnicas de programação POO (Programação Orientada a Objeto) criando um menu principal
+e três classes: Sistema, Cadastro e Estoque.
 ```
 
 ## Funcionalidade
