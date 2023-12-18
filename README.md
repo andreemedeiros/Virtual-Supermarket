@@ -25,7 +25,11 @@ e três classes: Sistema, Cadastro e Estoque.
       - Se escolher Cadastro, inicializará o cadastro do cliente.
       - Se escolher Gerente, terá uma chave de acesso predefinida.
 
-  - O gerente poderá cadastrar o produto com nome, código, preço, quantidade e obter a lista de todos os produtos para controle de estoque.
+  - O gerente poderá cadastrar o produto e obter a lista de todos os produtos para controle de estoque.
+      - nome.
+      - código.
+      - preço.
+      - quantidade.
 
   - Quando houver produtos no estoque, o cliente poderá ver a lista de produtos do supermercado e realizar a compra.
 ```
